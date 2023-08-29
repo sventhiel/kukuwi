@@ -1,4 +1,17 @@
-<div class="card">
- <h1 class="h1">Welcome to SvelteKit</h1>
- <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+ import InstrumentCard from "$lib/components/InstrumentCard.svelte";
+ import { instruments } from "$lib/data/data"
+
+
+</script>
+
+
+<div class="grid grid-cols-5 self-center gap-14 p-5 my-5">
+
+ {#each instruments as instrument}
+     <InstrumentCard {...instrument}/> 
+ {/each}
+
 </div>
+
+
