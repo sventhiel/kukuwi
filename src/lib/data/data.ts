@@ -4,7 +4,7 @@ export const instruments:instrumentCardType[] = [
 	{
 		id: 1,
 		name: 'Schlagzeug',
-		audio:'',
+		audio:'K01Beat160-01.wav',
 		image:'001-schlagzeug.png'
 	},
 	{
