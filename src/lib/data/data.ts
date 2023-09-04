@@ -4,55 +4,62 @@ export const instruments:instrumentCardType[] = [
 	{
 		id: 1,
 		name: 'Schlagzeug',
-		audio:'K01Beat160-01.wav',
-		image:'001-schlagzeug.png'
+		image:'001-schlagzeug.png',
+		audios:[
+			'Drums - Funk 111 bpm.mp3',
+			'Drums - Funk 112 bpm.mp3',
+			'Drums - Funk 122 bpm.mp3',
+			'Drums - Jazz Break 125 bpm.mp3',
+			'Drums - Jazz Brushes 70 bpm.mp3',
+			'Drums - Rock 72 bpm.mp3'
+		]
 	},
 	{
 		id: 2,
 		name: 'Gitarre',
-		audio:'',
-		image:'002-spanische-gitarre.png'
+		image:'002-spanische-gitarre.png',
+		audios:['']
 	},
 	{
 		id: 3,
 		name: 'Bass',
-		audio:'',
-		image:'003-elektrische-gitarre.png'
+		image:'003-elektrische-gitarre.png',
+		audios:['']
 	},
 	{
 		id: 4,
 		name: 'Synthesizer',
-		audio:'',
-		image:'004-elektrisches-klavier.png'
+		image:'004-elektrisches-klavier.png',
+		audios:['']
 	},
 	{
 		id: 5,
 		name: 'Piano',
-		audio:'',
-		image:'005-tastatur.png'
+		image:'005-tastatur.png',
+		audios:['']
 	},
 	{
 		id: 6,
 		name: 'Trompete',
-		audio:'',
-		image:'006-trompete.png'
+		image:'006-trompete.png',
+		audios:['']
 	},
 	{
 		id: 7,
 		name: 'Violine',
-		audio:'',
-		image:'007-violine.png'
+		image:'007-violine.png',
+		audios:['']
 	},
 	{
 		id: 8,
 		name: 'Saxophone',
-		audio:'',
-		image:'008-saxophon.png'
+		image:'008-saxophon.png',
+		audios:['']
 	},
 	{
 		id: 9,
 		name: 'Mikrophone',
-		audio:'',
-		image:'009-karaoke.png'
+		image:'009-karaoke.png',
+		audios:['']
 	}
 ]
