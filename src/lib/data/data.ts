@@ -18,13 +18,27 @@ export const instruments:instrumentCardType[] = [
 		id: 2,
 		name: 'Gitarre',
 		image:'002-spanische-gitarre.png',
-		audios:['']
-	},
+		audios:[
+			'Gt1 AfricanFunk Gm 120bpm.mp3',
+			'Gt1 Alternative Em 120bpm.mp3',
+			'Gt1 Blues Amaj 88bpm.mp3',
+			'Gt1 Chill Bm 108bpm.mp3',
+			'Gt1 Funk Cmaj 124bpm.mp3',
+			'Gt1 Punk Emaj 170bpm.mp3'
+		]
+		},
 	{
 		id: 3,
 		name: 'Bass',
 		image:'003-elektrische-gitarre.png',
-		audios:['']
+		audios:[
+			'Bs1 AfricanFunk Gm 120bpm.mp3',
+			'Bs1 Alternative Em 120bpm.mp3',
+			'Bs1 Blues Amaj 88bpm.mp3',
+			'Bs1 Chill Bm 108bpm.mp3',
+			'Bs1 Funk Cmaj 124bpm.mp3',
+			'Bs1 Punk Emaj 170bpm.mp3'
+		]
 	},
 	{
 		id: 4,
@@ -36,7 +50,9 @@ export const instruments:instrumentCardType[] = [
 		id: 5,
 		name: 'Piano',
 		image:'005-tastatur.png',
-		audios:['']
+		audios:[
+			'Piano Grand Piano Dirty Stabs E Minor 90 bpm.mp3'
+		]
 	},
 	{
 		id: 6,
@@ -60,6 +76,11 @@ export const instruments:instrumentCardType[] = [
 		id: 9,
 		name: 'Mikrophone',
 		image:'009-karaoke.png',
-		audios:['']
+		audios:[
+			'Vocal Beatbox Quasheesh.mp3',
+			'Vocal Demo Harmony.mp3',
+			'Vocal Kyathe Monks.mp3',
+			'Vocal L10 Demo Voc Reverb 1.mp3'
+		]
 	}
 ]
