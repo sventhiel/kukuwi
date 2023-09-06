@@ -54,7 +54,9 @@ export const instruments:instrumentCardType[] = [
 			'Piano Grand Piano Dirty Stabs E Minor 90 bpm.mp3',
 			'Piano Ostinato Focus F Dorian 85 bpm.mp3',
 			'Piano Ostinato Retrospection D Major 100 bpm.mp3',
-			'Piano Phrase Blues Sky Eb Minor 92bpm.mp3'
+			'Piano Phrase Blues Sky Eb Minor 92bpm.mp3',
+			'Piano Phrase Lazy Day IV-I Ab Major 105 bpm.mp3',
+			'Piano Progression City Drive A Minor 125 bpm.mp3'
 		]
 	},
 	{
