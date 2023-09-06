@@ -51,7 +51,10 @@ export const instruments:instrumentCardType[] = [
 		name: 'Piano',
 		image:'005-tastatur.png',
 		audios:[
-			'Piano Grand Piano Dirty Stabs E Minor 90 bpm.mp3'
+			'Piano Grand Piano Dirty Stabs E Minor 90 bpm.mp3',
+			'Piano Ostinato Focus F Dorian 85 bpm.mp3',
+			'Piano Ostinato Retrospection D Major 100 bpm.mp3',
+			'Piano Phrase Blues Sky Eb Minor 92bpm.mp3'
 		]
 	},
 	{
