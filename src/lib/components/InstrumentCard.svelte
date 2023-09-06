@@ -12,13 +12,9 @@
 
 	let index = getRandomAudioIndex();
 
-	
 
-	let img = ["Bs1 AfricanFunk Gm 120bpm.mp3"];
  let imageurl='/images/'+image;
-	//let audiourl ='/audios/Bs1 AfricanFunk Gm 120bpm.mp3'//'/audios/'+audios[index];
-	let audiourl = '/audios/'+img[0];
-	audiourl = '/audios/'+audios[0];
+	let audiourl = '/audios/';
  $:audiourl;
 
 	// console.log(audiourl, index, audios)
@@ -26,13 +22,8 @@
 	let duration = 0;
 	let paused = true;
 
-
-
-	onMount(async ()=>
-	{
-		if(index>-1){ audiourl = audiourl + ""+audios[index]}
-
-	})
+	if(index>-1){ audiourl = audiourl + ""+audios[index]}
+	
 
  function start()
  {
@@ -54,11 +45,8 @@
 
 </script>
 
-{#await onMount}
 
-<ProgressBar />
 
-{:then}
 {#if audios.length>0}
 <audio
 		src={audiourl}
@@ -76,4 +64,3 @@
   <img src={imageurl} alt="{name}" class="w-full"/>
 </div>
 
-{/await}

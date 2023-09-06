@@ -12,7 +12,23 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: false
-		})
+		}),
+		prerender: {
+			handleHttpError: ({ status, path, referrer, referenceType }) => {
+				if (
+					path.startsWith('/audios/')
+				) {
+					//do nothing as it links to backend
+				} else {
+					throw new Error(
+						path +
+							' Missing link.' +
+							`${status} ${path}${referrer ? ` (${referenceType} from ${referrer})` : ''}`
+					);
+				}
+				console.warn(`${status} ${path}${referrer ? ` (${referenceType} from ${referrer})` : ''}`);
+			}
+		}
 	}
 };
 
