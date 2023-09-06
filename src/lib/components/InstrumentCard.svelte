@@ -2,7 +2,6 @@
  
  import { RangeSlider } from '@skeletonlabs/skeleton';
 
-
  export let id: number;
 	export let i :number;
  export let name: string;
@@ -57,6 +56,6 @@
 	/>
 {/if}
 
-<div class="card btn cursor-pointer shadow-md hover:shadow-md lg:p-40 sm:p-5 md:p-10 hover:variant-filled-primary"  on:click={start} >
+<div class="card btn cursor-pointer shadow-md hover:shadow-md lg:p-20 sm:p-5 md:p-10 hover:variant-filled-primary"  on:click={start} >
   <img src={imageurl} alt="{name}" class="w-full"/>
 </div>
