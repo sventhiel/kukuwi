@@ -2,6 +2,7 @@
 	import { ProgressBar } from '@skeletonlabs/skeleton';
 
 	import { onMount } from 'svelte';
+	import {base} from '$app/paths'
 
  export let id: number;
 	export let i :number;
@@ -13,8 +14,8 @@
 	let index = getRandomAudioIndex();
 
 
- let imageurl='/images/'+image;
-	let audiourl = '/audios/';
+ let imageurl= base+"/images/"+image;
+	let audiourl = base+'/audios/';
  $:audiourl;
 
 	// console.log(audiourl, index, audios)

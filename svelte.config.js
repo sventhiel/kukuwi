@@ -13,10 +13,13 @@ const config = {
 			precompress: false,
 			strict: false
 		}),
+		paths:{
+			base:process.env.NODE_ENV==='production' ? '/kukuwi':''		}
+		,
 		prerender: {
 			handleHttpError: ({ status, path, referrer, referenceType }) => {
 				if (
-					path.startsWith('/audios/')
+					path.startsWith('/kukuwi/audios/')
 				) {
 					//do nothing as it links to backend
 				} else {
