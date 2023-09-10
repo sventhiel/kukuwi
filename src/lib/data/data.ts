@@ -39,13 +39,13 @@ export const instruments:instrumentCardType[] = [
 			'Bs1 Funk Cmaj 124bpm.mp3',
 			'Bs1 Punk Emaj 170bpm.mp3'
 		]
-	},
-	{
-		id: 4,
-		name: 'Synthesizer',
-		image:'004-elektrisches-klavier.png',
-		audios:['']
-	},
+	 },
+	// {
+	// 	id: 4,
+	// 	name: 'Synthesizer',
+	// 	image:'004-elektrisches-klavier.png',
+	// 	audios:['']
+	// },
 	{
 		id: 5,
 		name: 'Piano',
@@ -63,7 +63,12 @@ export const instruments:instrumentCardType[] = [
 		id: 6,
 		name: 'Trompete',
 		image:'006-trompete.png',
-		audios:['']
+		audios:[
+			'Trumpet 87bpm G minor.mp3',
+			'Trumpet 105bpm D minor.mp3',
+			'Trumpet Sax Sound Instrument.mp3',
+			'Trumpet Solo F Instrument.mp3'
+		]
 	},
 	{
 		id: 7,
@@ -75,7 +80,9 @@ export const instruments:instrumentCardType[] = [
 		id: 8,
 		name: 'Saxophone',
 		image:'008-saxophon.png',
-		audios:['']
+		audios:[
+			'Sax 60bpm E minor.mp3'
+		]
 	},
 	{
 		id: 9,
