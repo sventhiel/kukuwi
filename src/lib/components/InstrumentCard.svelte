@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { ProgressBar } from '@skeletonlabs/skeleton';
+	import Fa from 'svelte-fa'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+
 
 	import { onMount } from 'svelte';
 	import {base} from '$app/paths'
@@ -61,7 +64,29 @@
 	/>
 {/if}
 
-<div class="card btn cursor-pointer shadow-md hover:shadow-md lg:p-20 sm:p-5 md:p-10 hover:variant-filled-primary"  on:click={start} >
-  <img src={imageurl} alt="{name}" class="w-full"/>
+<div class="card 
+												cursor-pointer shadow-md hover:shadow-md hover:variant-filled-primary
+												p-2
+												space-y-3
+												"  
+												on:click={start} >
+											
+		<!-- <div class="card-header h3"></div> -->
+		<div class="px-4">										
+  	<img src={imageurl} alt="{name}" class="w-full h-full"/>
+		</div>
+
+			<div class="card-footer flex content-center space-x-4 ">	
+				<div><b>{name}</b></div> 	
+				{#if !paused}	
+				<div class="flex-none">			
+					<Fa icon={faPlay}/>				
+				</div>
+				<div class="grow">
+					<progress class="grow" value={time} max={duration} />
+				</div>
+			{/if}
+
+		</div>
 </div>
 

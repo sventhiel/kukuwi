@@ -6,10 +6,12 @@
 </script>
 
 <div class="flex justify-center">
-    <div class="w-full max-w-[3000px]">
-        <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 self-center gap-14 p-5 my-5">
+    <div class="w-full max-w-[3000px] md:max-w-[1200px]">
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 self-center gap-5 p-5 my-5">
             {#each instruments as instrument, i}
-                <InstrumentCard {i} {...instrument}/> 
+                <div class="w-full h-full">
+                    <InstrumentCard {i} {...instrument}/> 
+                </div>
             {/each}
         </div>
     </div>
