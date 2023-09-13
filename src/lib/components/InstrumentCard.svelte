@@ -4,7 +4,7 @@
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 
-	import { onMount } from 'svelte';
+	import { onMount, createEventDispatcher } from 'svelte';
 	import {base} from '$app/paths'
 
  export let id: number;
@@ -12,6 +12,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
  export let name: string;
  export let image: string ;
  export let audios: string[];
+	export let gameMode: boolean = false;
 
 
 	let index = getRandomAudioIndex();
@@ -28,6 +29,23 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 	if(index>-1){ audiourl = audiourl + ""+audios[index]}
 	
+
+	// event
+	const dispatch = createEventDispatcher();
+
+ function clickFn()
+	{
+				if(gameMode) //if game mode is true, then dispatch id via click 
+				{
+						dispatch('select', id);
+				}else
+				{
+					console.log("start");
+					
+					start();
+				}
+
+	}
 
  function start()
  {
@@ -69,7 +87,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 												p-2
 												space-y-3
 												"  
-												on:click={start} >
+												on:click={clickFn} >
 											
 		<!-- <div class="card-header h3"></div> -->
 		<div class="px-4">										
