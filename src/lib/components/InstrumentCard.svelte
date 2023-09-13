@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ProgressBar } from '@skeletonlabs/skeleton';
 
-	import { onMount } from 'svelte';
+	import { onMount, createEventDispatcher } from 'svelte';
 	import {base} from '$app/paths'
 
  export let id: number;
@@ -9,6 +9,7 @@
  export let name: string;
  export let image: string ;
  export let audios: string[];
+	export let gameMode: boolean = false;
 
 
 	let index = getRandomAudioIndex();
@@ -25,6 +26,23 @@
 
 	if(index>-1){ audiourl = audiourl + ""+audios[index]}
 	
+
+	// event
+	const dispatch = createEventDispatcher();
+
+ function clickFn()
+	{
+				if(gameMode) //if game mode is true, then dispatch id via click 
+				{
+						dispatch('select', id);
+				}else
+				{
+					console.log("start");
+					
+					start();
+				}
+
+	}
 
  function start()
  {
@@ -61,7 +79,8 @@
 	/>
 {/if}
 
-<div class="card btn cursor-pointer shadow-md hover:shadow-md lg:p-20 sm:p-5 md:p-10 hover:variant-filled-primary"  on:click={start} >
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="card btn cursor-pointer shadow-md hover:shadow-md lg:p-20 sm:p-5 md:p-10 hover:variant-filled-primary"  on:click={clickFn} >
   <img src={imageurl} alt="{name}" class="w-full"/>
 </div>
 
