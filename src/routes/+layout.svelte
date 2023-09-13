@@ -4,6 +4,7 @@
 	import Logo from "$lib/assets/logo.png"
 	import '../app.postcss';
 	import { updated } from '$app/stores';
+	import {base} from '$app/paths'
 
 	let currentTile = 0;
 	$:currentTile
@@ -31,14 +32,14 @@
 		<!-- Hidden below Tailwind's large breakpoint -->
 		<AppRail>
 			<svelte:fragment slot="lead">
-				<AppRailAnchor href="/" on:click={()=>updateTile(0)}><img src={Logo} alt="download icon" /></AppRailAnchor>
+				<AppRailAnchor href="{base}/" on:click={()=>updateTile(0)}><img src={Logo} alt="download icon" /></AppRailAnchor>
 			</svelte:fragment>
 			<!-- --- -->
-			<AppRailTile href="/Level1" bind:group={currentTile} name="1" value={1} title="Level 1" >
-				<AppRailAnchor href="/Level1" on:click={()=>updateTile(1)}><h1 class="h1">1</h1></AppRailAnchor>
+			<AppRailTile href="{base}/Level1" bind:group={currentTile} name="1" value={1} title="Level 1" >
+				<AppRailAnchor href="{base}/Level1" on:click={()=>updateTile(1)}><h1 class="h1">1</h1></AppRailAnchor>
 			</AppRailTile>
 			<AppRailTile bind:group={currentTile} name="tile-2" value={2} title="Level 2">
-				<AppRailAnchor href="/Level2" on:click={()=>updateTile(2)}><h1 class="h1">2</h1></AppRailAnchor>
+				<AppRailAnchor href="{base}/Level2" on:click={()=>updateTile(2)}><h1 class="h1">2</h1></AppRailAnchor>
 			</AppRailTile>
 		</AppRail>
 	</svelte:fragment>
