@@ -90,7 +90,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 												on:click={clickFn} >
 											
 		<!-- <div class="card-header h3"></div> -->
-		<div class="px-4">										
+		<div class="px-10">										
   	<img src={imageurl} alt="{name}" class="w-full h-full"/>
 		</div>
 

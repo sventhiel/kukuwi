@@ -10,5 +10,4 @@ function selectFn(e)
  
 </script>
 
-<h1>Level 0</h1>
 <InstrumentCards {instruments} gameMode={false}/>

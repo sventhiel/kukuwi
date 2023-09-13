@@ -3,13 +3,21 @@
 	import { AppBar } from '@skeletonlabs/skeleton';
 	import Logo from "$lib/assets/logo.png"
 	import '../app.postcss';
+	import { updated } from '$app/stores';
 
-	let currentTile="test"
+	let currentTile = 0;
+	$:currentTile
+
+	function updateTile(i)
+	{
+		currentTile = i;
+		console.log("currentTile",currentTile)
+	}
 
 </script>
 
 <AppShell>
-	<svelte:fragment slot="header">
+	<!--<svelte:fragment slot="header">
 		<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
 			<svelte:fragment slot="lead">
 				<img src={Logo} alt="download icon" class="w-24"/>
@@ -17,24 +25,21 @@
 		
 			<h1 class="h1">Instrumenten Spiel </h1>
 		</AppBar>
-	</svelte:fragment>
+	</svelte:fragment> -->
 
 	<svelte:fragment slot="sidebarLeft">
 		<!-- Hidden below Tailwind's large breakpoint -->
 		<AppRail>
 			<svelte:fragment slot="lead">
-				<AppRailAnchor href="/" >(icon)</AppRailAnchor>
+				<AppRailAnchor href="/" on:click={()=>updateTile(0)}><img src={Logo} alt="download icon" /></AppRailAnchor>
 			</svelte:fragment>
 			<!-- --- -->
-			<AppRailTile href="/Level1" bind:group={currentTile} name="1" value={0} title="Level 1">
-				<AppRailAnchor href="/Level1" >(icon)</AppRailAnchor>
-				<span>Level 1</span>
+			<AppRailTile href="/Level1" bind:group={currentTile} name="1" value={1} title="Level 1" >
+				<AppRailAnchor href="/Level1" on:click={()=>updateTile(1)}><h1 class="h1">1</h1></AppRailAnchor>
 			</AppRailTile>
-			<AppRailTile bind:group={currentTile} name="tile-2" value={1} title="Level 2">
-				<AppRailAnchor href="/Level2" >(icon)</AppRailAnchor>
-				<span>Level 2</span>
+			<AppRailTile bind:group={currentTile} name="tile-2" value={2} title="Level 2">
+				<AppRailAnchor href="/Level2" on:click={()=>updateTile(2)}><h1 class="h1">2</h1></AppRailAnchor>
 			</AppRailTile>
-
 		</AppRail>
 	</svelte:fragment>
 	
