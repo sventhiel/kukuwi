@@ -82,6 +82,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 	/>
 {/if}
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="card 
 												cursor-pointer shadow-md hover:shadow-md hover:variant-filled-primary
 												p-2

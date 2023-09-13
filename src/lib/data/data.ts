@@ -96,3 +96,14 @@ export const instruments:instrumentCardType[] = [
 		]
 	}
 ]
+
+
+export const successGifs:string[] = 
+[
+	"https://i.imgur.com/WOgTG96.gif"
+]
+
+export const failGifs:string[] = 
+[
+	"https://i.imgur.com/WOgTG96.gif"
+]

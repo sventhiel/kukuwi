@@ -1,11 +1,12 @@
 <script>
-	import { AppRail, AppRailAnchor, AppRailTile, AppShell } from '@skeletonlabs/skeleton';
-	import { AppBar } from '@skeletonlabs/skeleton';
+	import { AppRail, AppRailAnchor, AppRailTile, AppShell, Modal } from '@skeletonlabs/skeleton';
 	import Logo from "$lib/assets/logo.png"
 	import '../app.postcss';
 	import { updated } from '$app/stores';
 	import {base} from '$app/paths'
 
+
+	
 	let currentTile = 0;
 	$:currentTile
 
@@ -14,6 +15,10 @@
 		currentTile = i;
 		console.log("currentTile",currentTile)
 	}
+
+	import { initializeStores } from '@skeletonlabs/skeleton';
+
+ initializeStores();
 
 </script>
 
@@ -54,3 +59,4 @@
 	<!-- <svelte:fragment slot="pageFooter">Page Footer</svelte:fragment> -->
 	<!-- (footer) -->
 </AppShell>
+<Modal/>
