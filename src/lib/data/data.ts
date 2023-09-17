@@ -75,7 +75,7 @@ export const instruments:instrumentCardType[] = [
 		id: 7,
 		name: 'Violine',
 		image:'007-violine.png',
-		audios:['']
+		audios:['Violine 1.mp3']
 	},
 	{
 		id: 8,
