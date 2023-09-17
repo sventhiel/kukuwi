@@ -1,4 +1,5 @@
 import type { instrumentCardType } from "$lib/types/types";
+import { base } from "$app/paths";
 
 export const instruments:instrumentCardType[] = [
 	{
@@ -100,10 +101,18 @@ export const instruments:instrumentCardType[] = [
 
 export const successGifs:string[] = 
 [
-	"https://i.imgur.com/WOgTG96.gif"
+	"/images/success1.gif",
+	"/images/success2.gif",
+	"/images/success3.gif",
+	"/images/success4.gif",
+	"/images/success5.gif",
+	"/images/success6.gif"
 ]
 
 export const failGifs:string[] = 
 [
-	"https://i.imgur.com/WOgTG96.gif"
+	"/images/fail1.gif",
+	"/images/fail2.gif",
+	"/images/fail3.gif",
+	"/images/fail4.gif",
 ]

@@ -6,6 +6,8 @@ import GameOptions from "./GameOptions.svelte";
 
 import type { ModalSettings } from "@skeletonlabs/skeleton";
 import { getModalStore } from '@skeletonlabs/skeleton';
+import { base } from "$app/paths";
+import { getRandomIndex } from '$lib/helper'
 
 const modalStore = getModalStore();
 
@@ -28,7 +30,7 @@ function getResultImage(valid:boolean)
 		if(valid)
 		{
 			
-			const image = successGifs[0];
+			const image = base+successGifs[getRandomIndex(successGifs)];
 			 let r: ModalSettings = {
 				type: 'alert',
 				// Data
@@ -41,12 +43,14 @@ function getResultImage(valid:boolean)
 		}
 		else
 		{
-			const image = failGifs[0];
+			const image = base+failGifs[getRandomIndex(failGifs)];
 			let r: ModalSettings = {
 				type: 'alert',
 				// Data
 				title: 'Leider nicht richtig',
 				image: image,
+				buttonTextCancel: "X"
+				
 			};
 
 			return r;

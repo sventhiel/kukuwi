@@ -4,6 +4,7 @@
 	import Fa from 'svelte-fa'
  import { faPlay } from '@fortawesome/free-solid-svg-icons'
  import {base} from '$app/paths'
+	import { getRandomIndex } from '$lib/helper'
 
  export let playId:number = 0 ;
  export let instruments:instrumentCardType[] = [];
@@ -24,15 +25,6 @@
 
 
   
- function getRandomIndex(list:any[])
-	{
-   if(list != undefined)
-			{
-				return parseInt(""+Math.random() * (list.length));
-			}
-
-			return -1;
-	}
 
 
  function start()
@@ -58,7 +50,7 @@ on:ended={() => {
 
 <div class="flex px-5 space-x-3">
  <div class="flex-none">			
-  <button class="chip variant-filled-primary" on:click={()=>paused = !paused}><Fa icon={faPlay}/></button>
+  <button class="btn variant-filled-primary" on:click={()=>paused = !paused}><Fa icon={faPlay}/></button>
  </div>
  <div class="grow">
   <progress class="grow" value={time} max={duration} />
