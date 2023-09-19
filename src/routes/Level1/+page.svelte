@@ -10,6 +10,7 @@
 	import { getRandomIndex, getRandomSubset } from '$lib/helper';
 	import { onMount } from 'svelte';
  import type {instrumentCardType} from '$lib/types/types'
+	import GameResult from '$lib/components/GameResult.svelte';
 
 	const modalStore = getModalStore();
 
@@ -61,4 +62,5 @@ onMount(()=>{
 {#if instrumentSubset}
 <InstrumentCards instruments={instrumentSubset} gameMode={true} on:select={selectFn} />
 <GameOptions instruments={instrumentSubset} bind:playId />
+<GameResult url={"/Level1"} />
 {/if}
