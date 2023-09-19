@@ -105,8 +105,7 @@ export const successGifs:string[] =
 	"/images/success2.gif",
 	"/images/success3.gif",
 	"/images/success4.gif",
-	"/images/success5.gif",
-	"/images/success6.gif"
+	"/images/success5.gif"
 ]
 
 export const failGifs:string[] = 
