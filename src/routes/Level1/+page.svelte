@@ -2,7 +2,7 @@
 	import InstrumentCards from '$lib/components/InstrumentCards.svelte';
 	import { instruments, successGifs, failGifs } from '$lib/data/data';
 
-	import GameOptions from './GameOptions.svelte';
+	import GameOptions from '$lib/components/GameOptions.svelte';
 
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
 	import { getModalStore } from '@skeletonlabs/skeleton';

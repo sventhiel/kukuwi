@@ -36,7 +36,7 @@
  }
 
  </script>
-
+<div class="px-7">
 <audio
 src={audiourl}
 bind:currentTime={time}
@@ -55,4 +55,5 @@ on:ended={() => {
  <div class="grow">
   <progress class="grow" value={time} max={duration} />
  </div>
+</div>
 </div>

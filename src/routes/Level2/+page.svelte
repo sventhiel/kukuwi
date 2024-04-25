@@ -2,7 +2,7 @@
 	import InstrumentCards from '$lib/components/InstrumentCards.svelte';
 	import { instruments, successGifs, failGifs } from '$lib/data/data';
 
-	import GameOptions from './GameOptions.svelte';
+	import GameOptions from '$lib/components/GameOptions.svelte';
 
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
 	import { getModalStore } from '@skeletonlabs/skeleton';
@@ -11,7 +11,6 @@
 	import { onMount } from 'svelte';
  import type {instrumentCardType} from '$lib/types/types'
 	import GameResult from '$lib/components/GameResult.svelte';
-	import { url } from 'inspector';
 
 	const modalStore = getModalStore();
 
@@ -63,5 +62,5 @@ onMount(()=>{
 {#if instrumentSubset}
 <InstrumentCards instruments={instrumentSubset} gameMode={true} on:select={selectFn} />
 <GameOptions instruments={instrumentSubset} bind:playId />
-<GameResult url={"/Level2"} />
+<GameResult url={"/Level1"} />
 {/if}
