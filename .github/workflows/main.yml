@@ -31,7 +31,7 @@ jobs:
           version: 6.20.1
           run_install: true
 
-      - run: pnpm recursive  install  # Run install
+      - run: pnpm i  # Run install
       - run: pnpm run build  # Run build
       - run: dir
       - run: cp -a static/. ./build/  # Copy missing files to build folder
