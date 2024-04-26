@@ -95,6 +95,30 @@ export const instruments:instrumentCardType[] = [
 			'Vocal Kyathe Monks.mp3',
 			'Vocal L10 Demo Voc Reverb 1.mp3'
 		]
+	},
+	{
+		id: 10,
+		name: 'Harmonium',
+		image:'instrumente/icons8-harmonica-100.png',
+		audios:[
+			'Harmonium_124bpm_E.mp3'
+		]
+	},
+	{
+		id: 11,
+		name: 'Banjo',
+		image:'instrumente/icons8-banjo-100.png',
+		audios:[
+			'Banjo-exotic-loop_100bpm_B_minor.mp3'
+		]
+	},
+	{
+		id: 12,
+		name: 'Flöte',
+		image:'instrumente/icons8-flute-100.png',
+		audios:[
+			'Flute-vibey_150bpm.mp3'
+		]
 	}
 ]
 
