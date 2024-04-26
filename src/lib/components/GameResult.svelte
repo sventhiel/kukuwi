@@ -1,7 +1,6 @@
 <script lang="ts">
 
 	import { Modal } from "@skeletonlabs/skeleton";
-	import { base } from "$app/paths";
 	import { goTo } from "$lib/helper";
  
 

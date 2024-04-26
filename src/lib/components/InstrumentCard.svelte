@@ -88,15 +88,18 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 												p-2
 												space-y-3
 												"  
-												on:click={clickFn} >
+												on:click={clickFn} on:keydown={clickFn}>
 											
 		<!-- <div class="card-header h3"></div> -->
 		<div class="px-10">										
   	<img src={imageurl} alt="{name}" class="w-full h-full"/>
 		</div>
 
-			<div class="card-footer flex content-center space-x-4 ">	
-				<div><b>{name}</b></div> 	
+			<!-- <div class="card-footer flex content-center space-x-4 ">	 -->
+	
+				<div class="p-4 text-center font-bold sm:text-center md:text-center">
+					{name}
+			 </div>
 				{#if !paused}	
 				<div class="flex-none">			
 					<Fa icon={faPlay}/>				
@@ -106,6 +109,6 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 				</div>
 			{/if}
 
-		</div>
+		<!-- </div> -->
 </div>
 
