@@ -45,6 +45,9 @@
 			<AppRailTile bind:group={currentTile} name="tile-2" value={2} title="Level 2">
 				<AppRailAnchor href="{base}/Level2" on:click={()=>updateTile(2)}><h1 class="h1">2</h1></AppRailAnchor>
 			</AppRailTile>
+			<AppRailTile bind:group={currentTile} name="tile-3" value={3} title="Level 3">
+				<AppRailAnchor href="{base}/Level3" on:click={()=>updateTile(2)}><h1 class="h1">3</h1></AppRailAnchor>
+			</AppRailTile>
 		</AppRail>
 	</svelte:fragment>
 	

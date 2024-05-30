@@ -21,9 +21,7 @@
 	$:instrumentSubset;
 
 onMount(()=>{
-	 
-		instrumentSubset = getRandomSubset(instruments,4);
-		console.log("🚀 ~ onMount ~ instrumentSubset:", instrumentSubset)
+		instrumentSubset = getRandomSubset(instruments,8);
 
 })
 

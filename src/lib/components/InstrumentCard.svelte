@@ -82,6 +82,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 	/>
 {/if}
 
+
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="card 
 												cursor-pointer shadow-md hover:shadow-md hover:variant-filled-primary
@@ -89,26 +90,19 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 												space-y-3
 												"  
 												on:click={clickFn} on:keydown={clickFn}>
-											
-		<!-- <div class="card-header h3"></div> -->
 		<div class="px-10">										
   	<img src={imageurl} alt="{name}" class="w-full h-full"/>
 		</div>
-
-			<!-- <div class="card-footer flex content-center space-x-4 ">	 -->
-	
 				<div class="p-4 text-center font-bold sm:text-center md:text-center">
 					{name}
 			 </div>
 				{#if !paused}	
-				<div class="flex-none">			
-					<Fa icon={faPlay}/>				
-				</div>
-				<div class="grow">
+				<div class="flex gap-3 justify-center">
+
+				<div class="grow justify-center">
 					<progress class="grow" value={time} max={duration} />
 				</div>
+			</div>
 			{/if}
-
-		<!-- </div> -->
 </div>
 
