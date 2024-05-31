@@ -23,10 +23,6 @@
  i = getRandomIndex(instrument.audios);
  if(i>-1){ audiourl = audiourl + ""+instrument.audios[i]}
 
-
-  
-
-
  function start()
  {
    time=0;
@@ -36,7 +32,7 @@
  }
 
  </script>
-<div class="px-7">
+<div class="p-5">
 <audio
 src={audiourl}
 bind:currentTime={time}
@@ -48,12 +44,14 @@ on:ended={() => {
 }}/>
 
 
-<div class="flex px-5 space-x-3">
- <div class="flex-none">			
-  <button class="btn variant-filled-primary" on:click={()=>paused = !paused}><Fa icon={faPlay}/></button>
- </div>
- <div class="grow">
-  <progress class="grow" value={time} max={duration} />
- </div>
+<div class="flex justify-center ">
+	<div class="flex w-5/6  space-x-3">
+		<div class="flex-none">			
+			<button class="btn variant-filled-primary" on:click={()=>paused = !paused}><Fa icon={faPlay}/></button>
+		</div>
+		<div class="grow">
+			<progress class="grow" value={time} max={duration} />
+		</div>
+	</div>
 </div>
 </div>

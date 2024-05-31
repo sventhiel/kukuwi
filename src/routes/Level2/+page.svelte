@@ -62,5 +62,5 @@ onMount(()=>{
 {#if instrumentSubset}
 <InstrumentCards instruments={instrumentSubset} gameMode={true} on:select={selectFn} />
 <GameOptions instruments={instrumentSubset} bind:playId />
-<GameResult url={"/Level1"} />
+<GameResult url={"/Level2"} />
 {/if}

@@ -91,7 +91,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 												"  
 												on:click={clickFn} on:keydown={clickFn}>
 		<div class="px-10">										
-  	<img src={imageurl} alt="{name}" class="w-full h-full"/>
+  	<img src={imageurl} alt="{name}" class="w-full h-full p-10"/>
 		</div>
 				<div class="p-4 text-center font-bold sm:text-center md:text-center">
 					{name}
