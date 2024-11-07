@@ -1,13 +1,3 @@
-<script>
-import InstrumentCards from "$lib/components/InstrumentCards.svelte";
-import { instruments } from "$lib/data/data"
-function selectFn(e)
-{
-    //alert(e.detail);
-    var selectedId = e.detail;
-}
-
- 
-</script>
-
-<InstrumentCards {instruments} gameMode={false}/>
+<main class="flex h-full items-center justify-center">
+	<h1 class="text-6xl text-blue-500">Startseite</h1>
+</main>

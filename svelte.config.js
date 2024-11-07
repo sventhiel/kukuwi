@@ -1,37 +1,17 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
+	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
+
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: undefined,
-			precompress: false,
-			strict: false
-		}),
-		paths:{
-			base:process.env.NODE_ENV==='production' ? '/kukuwi':''		}
-		,
-		prerender: {
-			handleHttpError: ({ status, path, referrer, referenceType }) => {
-				if (
-					path.startsWith('/kukuwi/audios/')
-				) {
-					//do nothing as it links to backend
-				} else {
-					throw new Error(
-						path +
-							' Missing link.' +
-							`${status} ${path}${referrer ? ` (${referenceType} from ${referrer})` : ''}`
-					);
-				}
-				console.warn(`${status} ${path}${referrer ? ` (${referenceType} from ${referrer})` : ''}`);
-			}
-		}
+		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
+		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
+		adapter: adapter()
 	}
 };
 
