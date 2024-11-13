@@ -6,6 +6,7 @@
     import MidiBoardGrid from "$lib/components/MidiBoardGrid.svelte";
     import MusicControl from "$lib/components/MusicControl.svelte";
     import GIF from '$lib/components/GIF.svelte';
+    import { goto } from '$app/navigation';
 
     let {
         instruments,
@@ -45,6 +46,18 @@
 
 
     function handle_next_repeat_button():void{
+
+        if(game_won){
+
+          goto("/")
+        }else{
+
+          tries++
+          time_running = true;
+          game_ended = false;
+
+
+        }
 
 
 
