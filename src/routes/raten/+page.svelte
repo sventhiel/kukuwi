@@ -59,6 +59,7 @@
             board_bg_color="bg-gray-300"
             onmouseup = {handle_music_tile_click}
             track_source = {track_source}
+            correct_instrument_id= {correct_index}
     ></GuessingGame>
         {#if victory}
             <h1>Gewonnen</h1>

@@ -17,13 +17,7 @@
 
 
 {#if ready}
-<div class="fixed top-0 bottom-0 flex flex-col justify-center items-center h-screen w-screen  z-20 b">
-	<div class="h-5/6 max-h-5/6">
 
 		<GIF success={true}></GIF>
 
-	</div>
-</div>
-<div class="fixed top-0 bottom-0 flex flex-col justify-center items-center h-screen w-screen  z-15 opacity-80 bg-gray-500">
-</div>
 {/if}

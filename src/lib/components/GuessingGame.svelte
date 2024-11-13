@@ -1,4 +1,3 @@
-
 <script lang="ts">
 
 
@@ -6,6 +5,7 @@
     import type {instrumentCardType} from "$lib/types/types";
     import MidiBoardGrid from "$lib/components/MidiBoardGrid.svelte";
     import MusicControl from "$lib/components/MusicControl.svelte";
+    import GIF from '$lib/components/GIF.svelte';
 
     let {
         instruments,
@@ -13,6 +13,7 @@
         pause_tile_list,
         board_bg_color = "bg-[#252525]",
         track_source,
+        correct_instrument_id,
 
     }:{
         instruments:Array<instrumentCardType>,
@@ -22,6 +23,7 @@
         board_bg_color?:string,
         track_source:string,
         track_paused?:boolean,
+        correct_instrument_id:number,
 
     } = $props();
 
@@ -29,33 +31,51 @@
     let sound_level_float:number = $state(0.4);
 
 
-    function handle_play_button():void{
+    function handle_instrument_buttons(end_of_sound:boolean,id:number):void{
+        time_running = false;
+        track_paused = true;
+        game_won = id == correct_instrument_id;
+        game_ended = true;
+        sound_effect_paused = false
+
+
 
 
     }
 
 
+    function handle_next_repeat_button():void{
+
+
+
+    }
+
     let track_paused = $state(false);
-    let sound_effect_paused = $state(false);
+    let sound_effect_paused:boolean = $state(false);
+    let game_ended:boolean = $state(false);
+    let game_won:boolean = $state(false);
 
 
 
 
 
     let time:number= $state(0);
-    let time_running:boolean = $state(false);
+    let time_running:boolean = $state(true);
     let tries:number = $state(0);
     let repeats:number = $state(0);
 
 
     function start() {
 
-		setInterval(() => {
-			time++
+      setInterval(() => {
+        if(time_running){
 
-		}, 1000)
+          time++
+        }
 
-	}
+      }, 1000)
+
+	 }
 
     start();
 
@@ -105,7 +125,7 @@
                     pause_tile_list = {pause_tile_list}
                     use_tile_sounds = {false}
                     instruments = {instruments}
-                    onmouseup = {handle_play_button}
+                    onmouseup = {handle_instrument_buttons}
             ></MidiBoardGrid>
         </div>
 
@@ -116,6 +136,15 @@
         </div>
 
 </div>
+{#if game_ended}
+<div class="absolute top-0 left-0">
+  <GIF
+    bind:success = {game_won}
+    onclick={handle_next_repeat_button}
+    bind:gif_sound_pause = {sound_effect_paused}
+    bind:volume = {sound_level_float}
 
-<div>{time}</div>
 
+  ></GIF>
+</div>
+{/if}
