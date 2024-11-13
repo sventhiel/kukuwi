@@ -9,7 +9,7 @@
 
     let level = 0;
     let used_instruments:instrumentCardType[] = [];
-    let correct_index:number;
+    let correct_index:number = $state(-1);
     let victory:boolean = $state(false);
 
 

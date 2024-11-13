@@ -22,16 +22,16 @@
 
 
 
-<div class="grid grid-cols-2 bg-blue-200 border-gray-500 border-2">
+<div class="grid grid-cols-2 bg-blue-200 border-gray-500 border-2 text-xs lg:text-2xl">
 
-      <span class="border-2 p-1 text-2xl border-gray-500">Gehört</span>
-      <span class="border-2 p-1 items-center text-2xl border-gray-500">{repeats}</span>
+      <span class="border-2 p-1  border-gray-500">Gehört</span>
+      <span class="border-2 p-1 items-center border-gray-500">{repeats}</span>
 
-        <span class="border-2 p-1 text-2xl border-gray-500">Versuche</span>
-      <span class="border-2 p-1 items-center text-2xl border-gray-500">{tries}</span>
+        <span class="border-2 p-1  border-gray-500">Versuche</span>
+      <span class="border-2 p-1 items-center  border-gray-500">{tries}</span>
 
-        <span class="border-2 p-1 text-2xl border-gray-500">Zeit</span>
-      <span class="border-2 p-1 items-center text-2xl border-gray-500">{time}</span>
+        <span class="border-2 p-1  border-gray-500">Zeit</span>
+      <span class="border-2 p-1 items-center border-gray-500">{time}</span>
 
 
 </div>
