@@ -13,7 +13,7 @@
       time= $bindable(0),
       tries = $bindable(0),
       repeats = $bindable(0),
-    } = $props();
+    }:ComponentProps = $props();
 
 
 
