@@ -21,7 +21,7 @@
 
     function handle_volume_buttons(increase:boolean){
 
-        console.log(sound_level_float);
+
         if(increase){
             if(sound_level>=100){
                 return;

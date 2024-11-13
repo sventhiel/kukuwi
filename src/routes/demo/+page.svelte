@@ -21,7 +21,7 @@
 
 </script>
 
-<div class="w-full h-screen p-5">
+<div class="w-full h-screen p-5 bg-blue-200">
 <MidiBoard
         instruments={instruments}
         active_tile_list = {active_tile_list}

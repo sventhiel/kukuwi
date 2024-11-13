@@ -3,11 +3,9 @@
 
 
     import SoundControl from "$lib/components/SoundControl.svelte";
-    import {base} from '$app/paths';
     import type {instrumentCardType} from "$lib/types/types";
     import MidiBoardGrid from "$lib/components/MidiBoardGrid.svelte";
     import MusicControl from "$lib/components/MusicControl.svelte";
-    import { writable } from "svelte/store";
 
     let {
         instruments,
@@ -20,7 +18,7 @@
         instruments:Array<instrumentCardType>,
         active_tile_list:Array<boolean>,
         pause_tile_list:Array<boolean>,
-        onmouseup:(end_of_song:boolean,id:number) => any,
+        onmouseup:(end_of_song:boolean,id:number) => void,
         board_bg_color?:string,
         track_source:string,
         track_paused?:boolean,
@@ -38,6 +36,7 @@
 
 
     let track_paused = $state(false);
+    let sound_effect_paused = $state(false);
 
 
 
@@ -53,7 +52,7 @@
 
 		setInterval(() => {
 			time++
-            console.log(time)
+
 		}, 1000)
 
 	}

@@ -114,19 +114,23 @@ export const instruments: instrumentCardType[] = [
 ];
 
 export const successGifs: string[] = [
-	'/images/success1.gif',
-	'/images/success2.gif',
-	'/images/success3.gif',
-	'/images/success4.gif',
-	'/images/success5.gif',
-	'/images/fail3.gif',
-	'/images/fail4.gif',
-	'/images/fail4.gif',
-	'/images/gil-cat.gif',
-	'/images/happy-snoopy.gif'
+	'success1.gif',
+	'success2.gif',
+	'success3.gif',
+	'success4.gif',
+	'success5.gif',
+	'happy-snoopy.gif',
+	'gil-cat.gif',
 ];
 
-export const failGifs: string[] = ['/images/fail1.gif'];
+export const failGifs: string[] = [
+	'fail1.gif',
+	'fail3.gif',
+	'fail4.gif',
+	'fail4.gif',
+
+
+];
 
 export const level_guessing_list:Level_Guessing[] =[
 
@@ -138,5 +142,17 @@ export const level_guessing_list:Level_Guessing[] =[
 
 	}
 
+
+]
+
+export const failGifsSound:string[] = [
+	"trumpet-fail-242645.mp3",
+
+
+]
+
+export const successGifsSound:string[] = [
+	"brass-fanfare-with-timpani-and-winchimes-reverberated-146260.mp3",
+	"success-fanfare-trumpets-6185.mp3",
 
 ]

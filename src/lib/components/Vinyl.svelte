@@ -2,7 +2,6 @@
 
     let {
         spinning = false,
-        width = "w-min-1/10 w-full",
         height = "h-min-1/10 h-full",
 
     }:{
@@ -18,7 +17,7 @@
 
 
 
-<div class="flex flex-row justify-center items-center {width} aspect-square">
+<div class="flex flex-row justify-center items-center {height}">
     <div class="flex flex-row justify-center items-center w-full h-full rounded-full bg-gray-600 {spinning?'animate-spin-slow':''}">
             <div class="flex flex-row justify-center items-center w-5/6 h-5/6 rounded-full bg-gray-800
 

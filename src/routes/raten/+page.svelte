@@ -51,16 +51,13 @@
 
 </script>
 
-<div class="h-screen w-screen p-5">
+<div class="h-screen w-screen p-5 bg-blue-200">
     <GuessingGame
             instruments={used_instruments}
             active_tile_list = {active_tile_list}
             pause_tile_list={pause_tile_list}
             board_bg_color="bg-gray-300"
             onmouseup = {handle_music_tile_click}
-            use_control_panel = {true}
-            use_tile_sounds = {false}
-
             track_source = {track_source}
     ></GuessingGame>
         {#if victory}

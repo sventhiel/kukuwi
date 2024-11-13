@@ -54,7 +54,7 @@
 <div class="flex flex-col justify-evenly items-center h-full w-full">
 
 
-        <div class="w-full max-lg:hidden">
+        <div class="h-52  w-52 max-lg:hidden">
             <Vinyl spinning={!track_paused}></Vinyl>
         </div>
         <div class="flex flex-row justify-evenly items-stretch">
